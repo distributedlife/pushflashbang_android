@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PushFlashBang</string>
+    <string name="congratulations_english">Congratulations</string>
+    <string name="done_notice">All the things for LANGUAGE have been reviewed. Your next review will be due in TIME from now.</string>
+    <string name="close_application_button">CLOSE</string>
+    <string name="application_name">PushFlashBang</string>
+    <string name="reveal_button">reveal</string>
+    <string name="review_success_button">Pass</string>
+    <string name="review_failure_button">Fail</string>
+    <string name="dummy">dummy</string>
+    <string name="congratulations_chinese">祝贺您</string>
+</resources>

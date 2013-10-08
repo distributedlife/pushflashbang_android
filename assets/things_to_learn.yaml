@@ -1,0 +1,18 @@
+language: Simplified Chinese
+words:
+  - word: 你
+    meaning: you
+    guide: nǐ
+  - word: 好
+    meaning: good
+    guide: hǎo
+  - word: 吗
+    meaning: question mark
+    guide: ma
+sentences:
+  - sentence: 你好吗
+    guide: ní hǎo ma
+    meaning: How are you?
+  - sentence: 你好
+    guide: ní hǎo
+    meaning: Hello

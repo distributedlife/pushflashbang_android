@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <include layout="@layout/title_bar" android:id="@+id/include"/>
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignLeft="@+id/what"
+            android:layout_above="@+id/reveal" android:background="#555" android:layout_below="@+id/include">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy"
+                    android:id="@+id/what"
+                    android:textSize="72sp"
+                    android:textAlignment="center" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                    android:gravity="center_horizontal" android:textAllCaps="false" android:typeface="sans"
+                    android:textColor="#fff"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy"
+                    android:id="@+id/meaning"
+                    android:textAlignment="center" android:layout_centerHorizontal="true" android:layout_below="@+id/what"
+                    android:layout_marginBottom="12dp"/>
+            <TableLayout
+                    android:id="@+id/pronunciation"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:layout_below="@+id/meaning"
+                    android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="6dp" android:layout_marginRight="6dp">
+                <RelativeLayout android:layout_width="fill_parent"
+                                android:layout_height="2dip"
+                                android:background="#33333300"/>
+            </TableLayout>
+        </RelativeLayout>
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:layout_gravity="center_horizontal|bottom" android:orientation="horizontal"
+                android:weightSum="1.0">
+            <Button
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dip"
+                    android:text="@string/review_failure_button"
+                    android:id="@+id/fail" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/what" android:layout_gravity="left|bottom" android:textSize="24dp"
+                    android:textAllCaps="true" android:typeface="sans"/>
+            <Button
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dip"
+                    android:text="@string/review_success_button"
+                    android:id="@+id/pass" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"
+                    android:layout_alignBottom="@+id/fail" android:layout_gravity="right|bottom" android:textSize="24dp" android:textAllCaps="true"
+                    android:typeface="sans"/>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

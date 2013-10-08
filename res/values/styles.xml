@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="pronunciationText">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24dip</item>
+    </style>
+</resources>
