@@ -315,6 +315,21 @@ public class PushFlashBangTest {
     }
 
     @Test
+    public void WhenThereIsAFailedReviewAndTheUpdatedSequenceBecomesNegativeTenItShouldAlwaysLeaveZeroAsZero() {
+        WordReview review = new WordReview(1, "好", past, 0, 1);
+        Interval currentInterval = new Interval(0);
+        currentInterval.setSequence(-9);
+        when(intervals.getInterval(0)).thenReturn(currentInterval);
+        when(intervals.getPrevious(0)).thenReturn(currentInterval);
+        when(intervals.getFirst()).thenReturn(new Interval(0));
+
+        PushFlashBang pushflashbang = new PushFlashBang(intervals, schedule, thingsToLearn);
+        pushflashbang.failedReview(review);
+
+        assertThat(currentInterval.getInterval(), is(0));
+    }
+
+    @Test
     public void WhenThereIsASuccessfulReviewItShouldResetTheInterval() {
         WordReview review = new WordReview("好");
         when(intervals.getInterval(0)).thenReturn(new Interval(0));
@@ -421,6 +436,20 @@ public class PushFlashBangTest {
         pushflashbang.successfulReview(review);
 
         assertThat(currentInterval.getInterval(), is(15));
+    }
+
+    @Test
+    public void WhenThereIsASuccessfulReviewAndTheUpdatedSequenceBecomesPositiveTenItShouldAlwaysLeaveZeroAsZero() {
+        WordReview review = new WordReview(1, "好", past, 0, 1);
+        Interval currentInterval = new Interval(0);
+        currentInterval.setSequence(9);
+        when(intervals.getInterval(0)).thenReturn(currentInterval);
+        when(intervals.getNext(0)).thenReturn(new Interval(5));
+
+        PushFlashBang pushflashbang = new PushFlashBang(intervals, schedule, thingsToLearn);
+        pushflashbang.successfulReview(review);
+
+        assertThat(currentInterval.getInterval(), is(0));
     }
 
     @Test
