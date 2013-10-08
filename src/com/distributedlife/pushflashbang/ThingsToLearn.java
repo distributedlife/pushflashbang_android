@@ -16,6 +16,7 @@ public class ThingsToLearn {
             " ", ",", ".", ";", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+",
             "=", "{", "[", "}", "]", "|", "\\", ":", ";", "'", "\"", "<", ">", "?", "/"
     };
+    private List<String> unlearnableSentences;
 
     public ThingsToLearn(Map<String, Object> things, Schedule schedule) {
         this.schedule = schedule;
@@ -140,6 +141,37 @@ public class ThingsToLearn {
 
     public String getLanguageNative() {
         return language_native;
+    }
+
+    public boolean allSentencesCanBeLearnt() {
+        unlearnableSentences = new ArrayList<String>();
+
+        for(Object thing: sentences) {
+            Map<String, Object> thingToLearn = (Map<String, Object>) thing;
+
+            String sentence = (String) thingToLearn.get("sentence");
+            sentence = removePunctuation(sentence);
+
+            for (Object wordObject : words) {
+                Map<String, Object> wordStruct = (Map<String, Object>) wordObject;
+
+                String word = (String) wordStruct.get("word");
+                sentence = sentence.replace(word, "");
+                if (sentence.isEmpty()) {
+                    break;
+                }
+            }
+
+            if (!sentence.isEmpty()) {
+                unlearnableSentences.add((String) thingToLearn.get("sentence"));
+            }
+        }
+
+        return unlearnableSentences.isEmpty();
+    }
+
+    public List<String> getUnlearnableSentences() {
+        return unlearnableSentences;
     }
 
     private class SortByLength implements Comparator<WordReview> {

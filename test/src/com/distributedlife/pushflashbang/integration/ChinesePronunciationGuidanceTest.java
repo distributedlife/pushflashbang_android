@@ -22,7 +22,7 @@ public class ChinesePronunciationGuidanceTest {
     public void setup() throws FileNotFoundException {
         Yaml yaml = new Yaml();
 
-        URL url = ClassLoader.getSystemResource("chinese_pronunciation_guidance.yaml");
+        URL url = ClassLoader.getSystemResource("pronunciation_guidance.yaml");
         File file = new File(url.getPath());
         InputStream input = new FileInputStream(file);
 
