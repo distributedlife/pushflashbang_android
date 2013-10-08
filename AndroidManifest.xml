@@ -14,5 +14,6 @@
         </activity>
         <activity android:name=".android.activity.Done"/>
         <activity android:name=".android.activity.Revealed"/>
+        <activity android:name=".android.activity.NewCard"/>
     </application>
 </manifest>

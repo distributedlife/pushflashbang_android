@@ -49,14 +49,14 @@
     <ignored path="PushFlashBang.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1380611752369" ignored="false" />
-    <file path="/Review.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381125230783" ignored="false" />
+    <file path="/Review.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381234880976" ignored="false" />
     <file path="/Done.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381210499066" ignored="false" />
-    <file path="/Dummy.txt" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381189800017" ignored="false" />
-    <file path="/Revealed.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381209229754" ignored="false" />
-    <file path="/Interval.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381048760895" ignored="false" />
-    <file path="/PushFlashBang.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381060080310" ignored="false" />
-    <file path="/fragment.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381186634528" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381147262517" ignored="false" />
+    <file path="/Dummy.txt" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381231064254" ignored="false" />
+    <file path="/Revealed.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381232591141" ignored="false" />
+    <file path="/Interval.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381234226473" ignored="false" />
+    <file path="/PushFlashBang.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381212313099" ignored="false" />
+    <file path="/fragment.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381233505314" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381232453209" ignored="false" />
     <file path="/IntervalDataSource.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1380945215518" ignored="false" />
     <file path="/a.dummy" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1380966459509" ignored="false" />
     <file path="/IntervalHelper.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1380949604754" ignored="false" />
@@ -77,7 +77,7 @@
     <file path="$USER_HOME$/projects/pfbm/settings.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1380803566014" ignored="false" />
     <file path="$USER_HOME$/.m2/settings.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1380803927114" ignored="false" />
     <file path="/IntegrationTest.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381031789089" ignored="false" />
-    <file path="/Schedule.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381206268040" ignored="false" />
+    <file path="/Schedule.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381215110877" ignored="false" />
     <file path="/Words.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1380956283162" ignored="false" />
     <file path="/Word.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381187629931" ignored="false" />
     <file path="/Intervals.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381058183965" ignored="false" />
@@ -86,15 +86,15 @@
     <file path="/SentenceToLearn.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1380960457688" ignored="false" />
     <file path="/DoReview.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1380985036934" ignored="false" />
     <file path="/IntervalsTest.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381049089002" ignored="false" />
-    <file path="/ScheduleTest.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381060223769" ignored="false" />
-    <file path="/review.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381189553481" ignored="false" />
+    <file path="/ScheduleTest.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381215230134" ignored="false" />
+    <file path="/review.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381233747672" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/android/lib/android.jar!/org/jetbrains/android/android.xsd" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1380970578412" ignored="false" />
     <file path="/MockCursor.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1380971899034" ignored="false" />
     <file path="/ThingsToLearnTest.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381210424963" ignored="false" />
     <file path="/ThingstoLearnTest.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381031878373" ignored="false" />
     <file path="/chinese.yaml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381037752723" ignored="false" />
-    <file path="/PushFlashBangTest.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381049025950" ignored="false" />
-    <file path="/IntervalTest.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381048892501" ignored="false" />
+    <file path="/PushFlashBangTest.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381215072302" ignored="false" />
+    <file path="/IntervalTest.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381234288624" ignored="false" />
     <file path="/done.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381210576566" ignored="false" />
     <file path="/PronunciationGuidance.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381192448753" ignored="false" />
     <file path="/PronunciationGuidanceTEst.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381132444683" ignored="false" />
@@ -105,11 +105,16 @@
     <file path="/ChinesePronunciationGuidanceTest.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381187180376" ignored="false" />
     <file path="/PronunciationExplanation.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381198334522" ignored="false" />
     <file path="/customshape.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381188630759" ignored="false" />
-    <file path="/revealed.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381201813233" ignored="false" />
+    <file path="/revealed.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381215699005" ignored="false" />
     <file path="/styles.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381199424289" ignored="false" />
     <file path="/things_to_learn.yaml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381210267669" ignored="false" />
-    <file path="/strings.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381205789005" ignored="false" />
-    <file path="/PushFlashBangActivity.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381209319591" ignored="false" />
+    <file path="/strings.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381234606981" ignored="false" />
+    <file path="/PushFlashBangActivity.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381233525692" ignored="false" />
+    <file path="/WordReview.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381215179269" ignored="false" />
+    <file path="/title_bar.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381215503993" ignored="false" />
+    <file path="/NewCard.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381232717860" ignored="false" />
+    <file path="/ShowCardActivity.java" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381232262714" ignored="false" />
+    <file path="/newcard.xml" changelist="c4bc360b-707d-46b7-b064-8f74b961c1fc" time="1381232320649" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,43 +175,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Review.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Review.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/Review.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="0" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Done.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/Done.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="55" selection-start="1393" selection-end="1393" vertical-scroll-proportion="0.61612904">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PushFlashBangActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/PushFlashBangActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="16" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Revealed.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/Revealed.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="40" selection-start="4771" selection-end="4771" vertical-scroll-proportion="0.0">
+            <state line="24" column="16" selection-start="621" selection-end="621" vertical-scroll-proportion="0.48441926">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -224,29 +196,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/titlebartext.xml" />
-        <option value="$PROJECT_DIR$/res/layout/review.xml" />
-        <option value="$PROJECT_DIR$/src/com/distributedlife/pushflashbang/pronunciation/PronunciationGuidance.java" />
-        <option value="$PROJECT_DIR$/src/com/distributedlife/pushflashbang/pronunciation/PronunciationExplanation.java" />
-        <option value="$PROJECT_DIR$/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/res/layout/title_bar.xml" />
-        <option value="$PROJECT_DIR$/res/layout/revealed.xml" />
+        <option value="$PROJECT_DIR$/test/src/com/distributedlife/pushflashbang/db/ScheduleTest.java" />
         <option value="$PROJECT_DIR$/src/com/distributedlife/pushflashbang/db/Schedule.java" />
+        <option value="$PROJECT_DIR$/res/layout/title_bar.xml" />
+        <option value="$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/ShowCardActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/revealed.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/newcard.xml" />
+        <option value="$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/NewCard.java" />
         <option value="$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/PushFlashBangActivity.java" />
         <option value="$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/Revealed.java" />
+        <option value="$PROJECT_DIR$/res/drawable/customshape.xml" />
+        <option value="$PROJECT_DIR$/res/layout/review.xml" />
+        <option value="$PROJECT_DIR$/test/src/com/distributedlife/pushflashbang/IntervalTest.java" />
+        <option value="$PROJECT_DIR$/src/com/distributedlife/pushflashbang/Interval.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/assets/things_to_learn.yaml" />
-        <option value="$PROJECT_DIR$/src/com/distributedlife/pushflashbang/ThingsToLearn.java" />
-        <option value="$PROJECT_DIR$/test/src/com/distributedlife/pushflashbang/ThingsToLearnTest.java" />
-        <option value="$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/Done.java" />
-        <option value="$PROJECT_DIR$/res/layout/done.xml" />
+        <option value="$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/Review.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-768" />
+    <option name="x" value="-2" />
+    <option name="y" value="-764" />
     <option name="width" value="1360" />
-    <option name="height" value="768" />
+    <option name="height" value="746" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -342,62 +315,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pushflashbang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pronunciation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PushFlashBang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PushFlashBangMobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pushflashbang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="integration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PushFlashBang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PushFlashBangMobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -545,6 +462,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushFlashBang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PushFlashBangMobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -565,7 +500,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$USER_HOME$/java/joda-time-2.3.jar!/" />
-    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
+    <property name="AndroidLayoutSelectedEditor" value="android-designer" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="00194a395fb27e" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -627,34 +562,6 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Cover" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ChinesePronunciationGuidanceTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.distributedlife.pushflashbang.integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="PushFlashBang" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.distributedlife.pushflashbang.integration" />
-      <option name="MAIN_CLASS_NAME" value="com.distributedlife.pushflashbang.integration.ChinesePronunciationGuidanceTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -726,6 +633,34 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.distributedlife.pushflashbang" />
       <option name="MAIN_CLASS_NAME" value="com.distributedlife.pushflashbang.ThingsToLearnTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="IntervalTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.distributedlife.pushflashbang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="PushFlashBang" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.distributedlife.pushflashbang" />
+      <option name="MAIN_CLASS_NAME" value="com.distributedlife.pushflashbang.IntervalTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -854,18 +789,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Android Application.PushFlashBang" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.All in PushFlashBang" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ChinesePronunciationGuidanceTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ChinesePronunciationGuidanceTest.itShouldHandleAForwardAndBackChecks" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ChinesePronunciationGuidanceTest.itShouldHandleTheACharacterWithAccents" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.ThingsToLearnTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ChinesePronunciationGuidanceTest.itShouldHandleAForwardAndBackChecks" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ChinesePronunciationGuidanceTest.itShouldHandleTheACharacterWithAccents" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ThingsToLearnTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.IntervalTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ThingsToLearnTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.IntervalTest" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.All in PushFlashBang" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ChinesePronunciationGuidanceTest.itShouldHandleTheACharacterWithAccents" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ChinesePronunciationGuidanceTest.itShouldHandleAForwardAndBackChecks" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ChinesePronunciationGuidanceTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ThingsToLearnTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ChinesePronunciationGuidanceTest.itShouldHandleTheACharacterWithAccents" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ChinesePronunciationGuidanceTest.itShouldHandleAForwardAndBackChecks" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -904,7 +839,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-768" width="1360" height="768" extended-state="6" />
+    <frame x="-2" y="-764" width="1360" height="746" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34398782" sideWeight="0.5509259" order="3" side_tool="false" content_ui="tabs" />
@@ -919,12 +854,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32253087" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32253087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37808642" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32253087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="131" y="-623" width="1097" height="478" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3913738" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24961948" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25722983" sideWeight="0.5509259" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25722983" sideWeight="0.6086262" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44907406" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="60" y="-700" width="1240" height="631" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -995,9 +930,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/review.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/revealed.xml">
       <provider editor-type-id="text-editor">
-        <state line="11" column="44" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+        <state line="40" column="64" selection-start="0" selection-end="3860" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1005,9 +940,16 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/title_bar.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/ShowCardActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="84" selection-start="701" selection-end="885" vertical-scroll-proportion="-9.444445">
+        <state line="9" column="4" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/newcard.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="40" selection-start="2696" selection-end="2696" vertical-scroll-proportion="-28.962963">
           <folding />
         </state>
       </provider>
@@ -1015,140 +957,108 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/PushFlashBang.java">
+    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/WordReview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="0" selection-start="3037" selection-end="3037" vertical-scroll-proportion="2.2257001">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/db/Schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="43" selection-start="5095" selection-end="5095" vertical-scroll-proportion="3.948929">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3311#3323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/Revealed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="40" selection-start="4771" selection-end="4771" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="600" selection-end="605" vertical-scroll-proportion="0.0">
+        <state line="51" column="26" selection-start="1082" selection-end="1082" vertical-scroll-proportion="2.176">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/NewCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/revealed.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="64" selection-start="2217" selection-end="2393" vertical-scroll-proportion="0.54468805">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/Review.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0">
+        <state line="17" column="33" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/PushFlashBangActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="16" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/things_to_learn.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="87" selection-end="90" vertical-scroll-proportion="0.056951422">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/done.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="57" selection-start="2558" selection-end="2558" vertical-scroll-proportion="1.2310345">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/com/distributedlife/pushflashbang/integration/ThingsToLearnTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="431" selection-end="431" vertical-scroll-proportion="0.113902844">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/com/distributedlife/pushflashbang/ThingsToLearnTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="35" selection-start="2157" selection-end="2157" vertical-scroll-proportion="1.2612903">
-          <folding>
-            <element signature="e#1533#1549#0" expanded="true" />
-            <element signature="method#itShouldReturnTheFirstWord#0;class#ThingsToLearnTest#0" expanded="false" />
-            <element signature="method#whenGettingTheNextWordItShouldIgnoreWordsAlreadyInTheSchedule#0;class#ThingsToLearnTest#0" expanded="false" />
-            <element signature="method#itShouldReturnTheNextAvailableWord#0;class#ThingsToLearnTest#0" expanded="false" />
-            <element signature="method#whenGettingTheNextWordItShouldReturnNullIfThereAreNoWordsToAdd#0;class#ThingsToLearnTest#0" expanded="false" />
-            <element signature="e#3583#3595#0" expanded="true" />
-            <element signature="e#4129#4141#0" expanded="true" />
-            <element signature="e#4691#4703#0" expanded="true" />
-            <element signature="e#5696#5712#0" expanded="true" />
-            <element signature="e#5979#5991#0" expanded="true" />
-            <element signature="method#itShouldReturnTheMeaningForAWord#0;class#ThingsToLearnTest#0" expanded="false" />
-            <element signature="method#itShouldReturnTheMeaningForASentence#0;class#ThingsToLearnTest#0" expanded="false" />
-            <element signature="method#itShouldReturnTheGuideForAWord#0;class#ThingsToLearnTest#0" expanded="false" />
-            <element signature="method#itShouldReturnTheGuideForASentence#0;class#ThingsToLearnTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/ThingsToLearn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="39" selection-start="4543" selection-end="4543" vertical-scroll-proportion="1.7677419">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getFirst#0;class#ThingsToLearn#0" expanded="false" />
-            <element signature="method#getNextWordToLearn#0;class#ThingsToLearn#0" expanded="false" />
-            <element signature="method#getSortedListOfKnownWords#0;class#ThingsToLearn#0" expanded="false" />
-            <element signature="method#removePunctuation#0;class#ThingsToLearn#0" expanded="false" />
-            <element signature="method#getMeaningFor#0;class#ThingsToLearn#0" expanded="false" />
-            <element signature="method#getPhoneticFor#0;class#ThingsToLearn#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/Done.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="55" selection-start="1393" selection-end="1393" vertical-scroll-proportion="0.61612904">
+        <state line="54" column="72" selection-start="1744" selection-end="1800" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/Revealed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="22" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.519337">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setupButtonBindings#0;class#Revealed#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/done.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="58" selection-start="1687" selection-end="2054" vertical-scroll-proportion="0.2672414">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/customshape.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="37" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/review.xml">
+      <provider editor-type-id="text-editor">
+        <state line="28" column="8" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/PushFlashBangActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="5" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/com/distributedlife/pushflashbang/IntervalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="0" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/Interval.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="27" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.89032257">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="46" selection-start="669" selection-end="669" vertical-scroll-proportion="0.51657456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/distributedlife/pushflashbang/android/activity/Review.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="16" selection-start="621" selection-end="621" vertical-scroll-proportion="0.48441926">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

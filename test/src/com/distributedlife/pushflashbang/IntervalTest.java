@@ -65,4 +65,16 @@ public class IntervalTest {
 
         assertThat(interval.getSequence(), is(6));
     }
+
+    @Test
+    public void itShouldReturnReviewIfIdIsOdd() {
+        Interval interval = new Interval(1, 5, 0);
+        assertThat(interval.isReview(), is(true));
+    }
+
+    @Test
+    public void itShouldReturnTranslateIfIdIsEven() {
+        Interval interval = new Interval(2, 5, 0);
+        assertThat(interval.isReview(), is(false));
+    }
 }

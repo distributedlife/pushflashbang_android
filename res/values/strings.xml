@@ -6,7 +6,11 @@
     <string name="close_application_button">CLOSE</string>
     <string name="application_name">PushFlashBang</string>
     <string name="reveal_button">reveal</string>
-    <string name="review_success_button">Pass</string>
-    <string name="review_failure_button">Fail</string>
+    <string name="review_success_button">Yay!</string>
+    <string name="review_failure_button">Damn!</string>
     <string name="dummy">dummy</string>
+    <string name="new_item">New Stuff</string>
+    <string name="review_new">OK</string>
+    <string name="review_hint">You\'ve seen this before. Do you remember what this means in LANGUAGE?</string>
+    <string name="translate_hint">Do you remember how to pronounce this word in LANGUAGE?</string>
 </resources>

@@ -55,4 +55,8 @@ public class Interval {
             sequence += 1;
         }
     }
+
+    public boolean isReview() {
+        return (id % 2 == 1);
+    }
 }

@@ -67,6 +67,8 @@ public class Done extends PushFlashBangActivity {
         String timeMessage;
         if (seconds < SECONDS_IN_MINUTE) {
             timeMessage = "less than a minute";
+        } else if (seconds < SECONDS_IN_MINUTE * 2) {
+            timeMessage = "about one minute";
         } else if (seconds >= SECONDS_IN_MINUTE && seconds < SECONDS_IN_HOUR) {
             timeMessage = String.format("about %d minutes", seconds / SECONDS_IN_MINUTE);
         } else if (seconds >= SECONDS_IN_HOUR && seconds < (SECONDS_IN_HOUR * 1.5)) {

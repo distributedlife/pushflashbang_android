@@ -286,7 +286,7 @@ public class PushFlashBangTest {
 
     @Test
     public void WhenThereIsAFailedReviewAndTheUpdatedSequenceBecomesNegativeTenItShouldReduceTheInterval() {
-        WordReview review = new WordReview(1, "好", past, 5);
+        WordReview review = new WordReview(1, "好", past, 5, 1);
         Interval currentInterval = new Interval(5);
         currentInterval.setSequence(-9);
         when(intervals.getInterval(5)).thenReturn(currentInterval);
@@ -297,6 +297,21 @@ public class PushFlashBangTest {
         pushflashbang.failedReview(review);
 
         assertThat(currentInterval.getInterval(), is(2));
+    }
+
+    @Test
+    public void WhenThereIsAFailedReviewAndThereIsAChangeInIntervalTimeItShouldUpdateAllExistingReviewsOnTheOldInterval() {
+        WordReview review = new WordReview(1, "好", past, 5, 1);
+        Interval currentInterval = new Interval(5);
+        currentInterval.setSequence(-9);
+        when(intervals.getInterval(5)).thenReturn(currentInterval);
+        when(intervals.getPrevious(5)).thenReturn(new Interval(0));
+        when(intervals.getFirst()).thenReturn(new Interval(0));
+
+        PushFlashBang pushflashbang = new PushFlashBang(intervals, schedule, thingsToLearn);
+        pushflashbang.failedReview(review);
+
+        verify(schedule).updateIntervals(5, 2);
     }
 
     @Test
@@ -395,8 +410,8 @@ public class PushFlashBangTest {
     }
 
     @Test
-    public void WhenThereIsASuccessfulReviewAndTheUpdatedSequenceBecomesPositiveTenItShouldReduceTheInterval() {
-        WordReview review = new WordReview(1, "好", past, 5);
+    public void WhenThereIsASuccessfulReviewAndTheUpdatedSequenceBecomesPositiveTenItShouldIncreaseTheInterval() {
+        WordReview review = new WordReview(1, "好", past, 5, 1);
         Interval currentInterval = new Interval(5);
         currentInterval.setSequence(9);
         when(intervals.getInterval(5)).thenReturn(currentInterval);
@@ -406,5 +421,19 @@ public class PushFlashBangTest {
         pushflashbang.successfulReview(review);
 
         assertThat(currentInterval.getInterval(), is(15));
+    }
+
+    @Test
+    public void WhenThereIsASuccessfulReviewAndThereIsAChangeInIntervalTimeItShouldUpdateAllExistingReviewsOnTheOldInterval() {
+        WordReview review = new WordReview(1, "好", past, 5, 1);
+        Interval currentInterval = new Interval(5);
+        currentInterval.setSequence(9);
+        when(intervals.getInterval(5)).thenReturn(currentInterval);
+        when(intervals.getNext(5)).thenReturn(new Interval(25));
+
+        PushFlashBang pushflashbang = new PushFlashBang(intervals, schedule, thingsToLearn);
+        pushflashbang.successfulReview(review);
+
+        verify(schedule).updateIntervals(5, 15);
     }
 }

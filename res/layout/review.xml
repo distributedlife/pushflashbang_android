@@ -26,6 +26,21 @@
                 android:clickable="false" android:typeface="sans" android:visibility="visible" android:textSize="24dp"
                 android:singleLine="false"
                 android:textAllCaps="true"/>
+        <RelativeLayout android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/done_notice"
+                        android:layout_below="@+id/congratulations_native"
+                        android:background="@drawable/customshape"
+                        android:layout_gravity="center_vertical|bottom" android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp" android:layout_marginBottom="84dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/review_hint"
+                    android:id="@+id/hint" android:layout_gravity="center" android:layout_marginLeft="12dp"
+                    android:textSize="16sp" android:textColor="#fff" android:layout_alignParentBottom="false"
+                    android:layout_alignParentEnd="false" android:layout_alignParentStart="false"/>
+        </RelativeLayout>
     </FrameLayout>
 </RelativeLayout>
 

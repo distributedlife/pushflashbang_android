@@ -60,13 +60,13 @@ public class ScheduleTest {
     public void itShouldCreateADatabase() {
         schedule.onCreate(sqLiteDatabase);
 
-        verify(sqLiteDatabase).execSQL("CREATE TABLE schedule (id INTEGER PRIMARY KEY AUTOINCREMENT, what TEXT NOT NULL, due TEXT NOT NULL, interval INTEGER NOT NULL);");
+        verify(sqLiteDatabase).execSQL("CREATE TABLE schedule (id INTEGER PRIMARY KEY AUTOINCREMENT, what TEXT NOT NULL, due TEXT NOT NULL, interval INTEGER NOT NULL, first INTEGER NOT NULL);");
     }
 
     @Test
     public void itShouldKnowIfItIsEmpty() {
         doReturn(sqLiteDatabase).when(schedule).getReadableDatabase();
-        when(sqLiteDatabase.query("schedule", new String[] {"id", "what", "due", "interval"}, null, null, null, null, null)).thenReturn(new MockCursor(new ArrayList<Object[]>()));
+        when(sqLiteDatabase.query("schedule", new String[] {"id", "what", "due", "interval", "first"}, null, null, null, null, null)).thenReturn(new MockCursor(new ArrayList<Object[]>()));
 
         assertThat(schedule.isEmpty(), is(true));
     }
@@ -74,14 +74,14 @@ public class ScheduleTest {
     @Test
     public void itShouldGetAllItemsInTable() {
         List<Object[]> originalItems = new ArrayList<Object[]>();
-        originalItems.add(new Object[] {1, "你", past.toString(formatter), 5});
-        originalItems.add(new Object[] {2, "好", now.toString(formatter), 25});
-        originalItems.add(new Object[] {3, "你好", future.toString(formatter), 120});
+        originalItems.add(new Object[] {1, "你", past.toString(formatter), 5, 1});
+        originalItems.add(new Object[] {2, "好", now.toString(formatter), 25, 0});
+        originalItems.add(new Object[] {3, "你好", future.toString(formatter), 120, 0});
 
         MockCursor fakeCursor = new MockCursor(originalItems);
 
         doReturn(sqLiteDatabase).when(schedule).getReadableDatabase();
-        when(sqLiteDatabase.query("schedule", new String[] {"id", "what", "due", "interval"}, null, null, null, null, null)).thenReturn(fakeCursor);
+        when(sqLiteDatabase.query("schedule", new String[] {"id", "what", "due", "interval", "first"}, null, null, null, null, null)).thenReturn(fakeCursor);
 
         List<WordReview> items = schedule.getAll();
 
@@ -90,45 +90,49 @@ public class ScheduleTest {
         assertThat(items.get(0).getWhat(), is("你"));
         assertThat(items.get(0).getDue(), is(past));
         assertThat(items.get(0).getInterval(), is(5));
+        assertThat(items.get(0).isFirst(), is(true));
 
         assertThat(items.get(1).getId(), is(2));
         assertThat(items.get(1).getWhat(), is("好"));
         assertThat(items.get(1).getDue(), is(now));
         assertThat(items.get(1).getInterval(), is(25));
+        assertThat(items.get(1).isFirst(), is(false));
 
         assertThat(items.get(2).getId(), is(3));
         assertThat(items.get(2).getWhat(), is("你好"));
         assertThat(items.get(2).getDue(), is(future));
         assertThat(items.get(2).getInterval(), is(120));
+        assertThat(items.get(2).isFirst(), is(false));
     }
 
     @Test
     public void itShouldGetTheNextDueReview() {
         List<Object[]> originalItems = new ArrayList<Object[]>();
-        originalItems.add(new Object[] {1, "你", future.toString(formatter), 5});
-        originalItems.add(new Object[] {3, "你好", past.toString(formatter), 120});
+        originalItems.add(new Object[] {1, "你", future.toString(formatter), 5, 1});
+        originalItems.add(new Object[] {3, "你好", past.toString(formatter), 120, 0});
 
         MockCursor fakeCursor = new MockCursor(originalItems);
 
         doReturn(sqLiteDatabase).when(schedule).getReadableDatabase();
-        when(sqLiteDatabase.query("schedule", new String[] {"id", "what", "due", "interval"}, null, null, null, null, null)).thenReturn(fakeCursor);
+        when(sqLiteDatabase.query("schedule", new String[] {"id", "what", "due", "interval", "first"}, null, null, null, null, null)).thenReturn(fakeCursor);
 
         assertThat(schedule.getNext().getId(), is(3));
         assertThat(schedule.getNext().getWhat(), is("你好"));
         assertThat(schedule.getNext().getDue(), is(past));
         assertThat(schedule.getNext().getInterval(), is(120));
+        assertThat(schedule.getNext().isFirst(), is(false));
     }
 
     @Test
     public void whenGettingTheNextDueItShouldIgnoreFutureReviews() {
         List<Object[]> originalItems = new ArrayList<Object[]>();
-        originalItems.add(new Object[] {1, "你", future.toString(formatter), 5});
-        originalItems.add(new Object[] {3, "你好", future.toString(formatter), 120});
+        originalItems.add(new Object[] {1, "你", future.toString(formatter), 5, 1});
+        originalItems.add(new Object[] {3, "你好", future.toString(formatter), 120, 0});
 
         MockCursor fakeCursor = new MockCursor(originalItems);
 
         doReturn(sqLiteDatabase).when(schedule).getReadableDatabase();
-        when(sqLiteDatabase.query("schedule", new String[] {"id", "what", "due", "interval"}, null, null, null, null, null)).thenReturn(fakeCursor);
+        when(sqLiteDatabase.query("schedule", new String[] {"id", "what", "due", "interval", "first"}, null, null, null, null, null)).thenReturn(fakeCursor);
 
         assertThat(schedule.getNext(), is(nullValue()));
     }
@@ -139,7 +143,7 @@ public class ScheduleTest {
 
         schedule.add(new WordReview("你好"));
 
-        verify(sqLiteDatabase).execSQL("INSERT INTO schedule (what, due, interval) VALUES ('你好', '" + now.toString(formatter) + "', 0);");
+        verify(sqLiteDatabase).execSQL("INSERT INTO schedule (what, due, interval, first) VALUES ('你好', '" + now.toString(formatter) + "', 0, 1);");
     }
 
     @Test
@@ -158,8 +162,17 @@ public class ScheduleTest {
     public void itShouldUpdateReviewsInTheSchedule() {
         doReturn(sqLiteDatabase).when(schedule).getWritableDatabase();
 
-        schedule.update(new WordReview(50, "你好", future, 10));
+        schedule.update(new WordReview(50, "你好", future, 10, 1));
 
-        verify(sqLiteDatabase).execSQL("UPDATE schedule SET what = '你好', due = '" + future.toString(formatter) + "', interval = 10 WHERE id = 50;");
+        verify(sqLiteDatabase).execSQL("UPDATE schedule SET what = '你好', due = '" + future.toString(formatter) + "', interval = 10, first = 0 WHERE id = 50;");
+    }
+
+    @Test
+    public void itShouldUpdateAllOldIntervalsToNewIntervals() {
+        doReturn(sqLiteDatabase).when(schedule).getWritableDatabase();
+
+        schedule.updateIntervals(100, 200);
+
+        verify(sqLiteDatabase).execSQL("UPDATE schedule SET interval = 200 WHERE interval = 100;");
     }
 }

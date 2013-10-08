@@ -7,19 +7,21 @@ public class WordReview {
     private DateTime due;
     private Integer interval;
     private Integer id;
-    private CharSequence meaning;
+    private Integer first;
 
-    public WordReview(Integer id, String what, DateTime due, int interval) {
+    public WordReview(Integer id, String what, DateTime due, Integer interval, Integer first) {
         this.id = id;
         this.what = what;
         this.due = due;
         this.interval = interval;
+        this.first = first;
     }
 
     public WordReview(String what) {
         this.what = what;
         this.due = DateTime.now();
         this.interval = 0;
+        this.first = 1;
     }
 
     public String getWhat() {
@@ -44,5 +46,9 @@ public class WordReview {
 
     public void setDue(DateTime due) {
         this.due = due;
+    }
+
+    public boolean isFirst() {
+        return first == 1;
     }
 }

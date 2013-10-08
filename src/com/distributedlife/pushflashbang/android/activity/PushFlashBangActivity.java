@@ -1,6 +1,7 @@
 package com.distributedlife.pushflashbang.android.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import com.distributedlife.pushflashbang.PushFlashBang;
@@ -37,9 +38,13 @@ public class PushFlashBangActivity extends Activity {
     }
 
     protected void returnToReview() {
-        Intent intent = new Intent(this, Review.class);
-        startActivity(intent);
+        show(this, Review.class);
         this.finish();
+    }
+
+    void show(Context context, Class klass) {
+        Intent intent = new Intent(context, klass);
+        startActivity(intent);
     }
 
     private InputStream getAsset(String filename) throws IOException {

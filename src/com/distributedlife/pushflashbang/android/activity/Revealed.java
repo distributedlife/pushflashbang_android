@@ -5,10 +5,7 @@ import android.text.Spannable;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-import android.widget.TextView;
+import android.widget.*;
 import com.distributedlife.pushflashbang.R;
 import com.distributedlife.pushflashbang.WordReview;
 import com.distributedlife.pushflashbang.pronunciation.PronunciationExplanation;
@@ -20,20 +17,19 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.LinkedHashMap;
 
-public class Revealed extends PushFlashBangActivity {
+public class Revealed extends ShowCardActivity {
     private PronunciationGuidance pronunciationGuidance;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.revealed);
+
+        setup();
 
         try {
-            pronunciationGuidance = new PronunciationGuidance((LinkedHashMap<String, Object>) new Yaml().load(getAsset("chinese_pronunciation_guidance.yaml")));
+            pronunciationGuidance = new PronunciationGuidance((LinkedHashMap<String, Object>) new Yaml().load(getAsset("pronunciation_guidance.yaml")));
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        setupButtonBindings();
 
         WordReview wordReview = pushFlashBang.getNextWordToReview();
         if (wordReview == null) {
@@ -41,6 +37,12 @@ public class Revealed extends PushFlashBangActivity {
         } else {
             setFields(wordReview);
         }
+    }
+
+    @Override
+    void setup() {
+        setContentView(R.layout.revealed);
+        setupButtonBindings();
     }
 
     private void setupButtonBindings() {
@@ -71,7 +73,7 @@ public class Revealed extends PushFlashBangActivity {
             PronunciationExplanation pronunciationExplanation = pronunciationGuidance.getExplanation(part);
 
             TextView pronunciationText = newPronunciationText(pronunciationExplanation);
-            highlightKeySoundsInPronunciationTexxt(pronunciationExplanation, pronunciationText);
+            highlightKeySoundsInPronunciationText(pronunciationExplanation, pronunciationText);
 
             row.addView(newPhoneticText(part));
             row.addView(pronunciationText);
@@ -79,7 +81,7 @@ public class Revealed extends PushFlashBangActivity {
         }
     }
 
-    private void highlightKeySoundsInPronunciationTexxt(PronunciationExplanation pronunciationExplanation, TextView pronunciationText) {
+    private void highlightKeySoundsInPronunciationText(PronunciationExplanation pronunciationExplanation, TextView pronunciationText) {
         Spannable str = (Spannable) pronunciationText.getText();
         for(Range<Integer> range: pronunciationExplanation.getEmphasisedParts()) {
             str.setSpan(new ForegroundColorSpan(0x8CFF0000), range.getMinimum(), range.getMaximum(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -118,22 +120,14 @@ public class Revealed extends PushFlashBangActivity {
         @Override
         public void onClick(View view) {
             pushFlashBang.failedReview(pushFlashBang.getNextWordToReview());
-
-//            intervals.close();
-//            schedule.close();
-
             finish();
         }
     }
 
-    private class ReviewSucceeded implements View.OnClickListener {
+    class ReviewSucceeded implements View.OnClickListener {
         @Override
         public void onClick(View view) {
             pushFlashBang.successfulReview(pushFlashBang.getNextWordToReview());
-
-//            intervals.close();
-//            schedule.close();
-
             finish();
         }
     }

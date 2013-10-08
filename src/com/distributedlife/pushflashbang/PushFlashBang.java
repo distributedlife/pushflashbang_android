@@ -83,7 +83,13 @@ public class PushFlashBang {
             currentInterval.setSequence(0);
 
             Interval previousInterval = intervals.getPrevious(currentInterval.getInterval());
-            currentInterval.setInterval((currentInterval.getInterval() + previousInterval.getInterval()) / 2);
+
+            Integer oldInterval = currentInterval.getInterval();
+            Integer newInterval = (currentInterval.getInterval() + previousInterval.getInterval()) / 2;
+
+            currentInterval.setInterval(newInterval);
+
+            schedule.updateIntervals(oldInterval, newInterval);
         }
 
         schedule.update(review);
@@ -102,7 +108,12 @@ public class PushFlashBang {
         if (currentInterval.getSequence() == 10) {
             currentInterval.setSequence(0);
 
-            currentInterval.setInterval((currentInterval.getInterval() + nextInterval.getInterval()) / 2);
+            Integer oldInterval = currentInterval.getInterval();
+            Integer newInterval = (currentInterval.getInterval() + nextInterval.getInterval()) / 2;
+
+            currentInterval.setInterval(newInterval);
+
+            schedule.updateIntervals(oldInterval, newInterval);
         }
 
         schedule.update(review);

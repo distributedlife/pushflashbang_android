@@ -23,7 +23,8 @@ public class Schedule extends SQLiteOpenHelper {
     private static final String WHAT = "what" ;
     private static final String DUE = "due" ;
     private static final String INTERVAL = "interval" ;
-    private static final String[] ALL_COLUMNS = new String[] {ID, WHAT, DUE, INTERVAL};
+    private static final String FIRST = "first";
+    private static final String[] ALL_COLUMNS = new String[] {ID, WHAT, DUE, INTERVAL, FIRST};
     private static final int VERSION = 1;
     public static final String PATTERN = "YYYY-MM-DD HH:mm:ss.SSSZ";
 
@@ -44,7 +45,7 @@ public class Schedule extends SQLiteOpenHelper {
         stringBuilder.append(" ");
         stringBuilder.append("(");
 
-        String[] columns = new String[] {"id INTEGER PRIMARY KEY AUTOINCREMENT, what TEXT NOT NULL", "due TEXT NOT NULL", "interval INTEGER NOT NULL"};
+        String[] columns = new String[] {"id INTEGER PRIMARY KEY AUTOINCREMENT, what TEXT NOT NULL", "due TEXT NOT NULL", "interval INTEGER NOT NULL, first INTEGER NOT NULL"};
         stringBuilder.append(StringUtils.join(columns, ", "));
 
         stringBuilder.append(")");
@@ -68,9 +69,9 @@ public class Schedule extends SQLiteOpenHelper {
         DateTimeParser parser = DateTimeFormat.forPattern(PATTERN).getParser();
         DateTimeFormatter formatter = new DateTimeFormatterBuilder().append(parser).toFormatter();
 
-        String[] columns = new String[] {"what", "due", "interval"};
+        String[] columns = new String[] {"what", "due", "interval", "first"};
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(String.format("INSERT INTO %s (%s) VALUES ('%s', '%s', %d);", NAME, StringUtils.join(columns, ", "), what, due.toString(formatter), interval));
+        stringBuilder.append(String.format("INSERT INTO %s (%s) VALUES ('%s', '%s', %d, 1);", NAME, StringUtils.join(columns, ", "), what, due.toString(formatter), interval));
 
         return stringBuilder.toString();
     }
@@ -111,7 +112,8 @@ public class Schedule extends SQLiteOpenHelper {
                 cursor.getInt(0),
                 cursor.getString(1),
                 DateTime.parse(cursor.getString(2), formatter),
-                cursor.getInt(3)
+                cursor.getInt(3),
+                cursor.getInt(4)
         );
     }
 
@@ -130,7 +132,7 @@ public class Schedule extends SQLiteOpenHelper {
         DateTimeFormatter formatter = new DateTimeFormatterBuilder().append(parser).toFormatter();
 
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(String.format("UPDATE %s SET what = '%s', due = '%s', interval = %d WHERE id = %d;", NAME, review.getWhat(), review.getDue().toString(formatter), review.getInterval(), review.getId()));
+        stringBuilder.append(String.format("UPDATE %s SET what = '%s', due = '%s', interval = %d, first = 0 WHERE id = %d;", NAME, review.getWhat(), review.getDue().toString(formatter), review.getInterval(), review.getId()));
 
         getWritableDatabase().execSQL(stringBuilder.toString());
     }
@@ -140,6 +142,13 @@ public class Schedule extends SQLiteOpenHelper {
         Collections.sort(wordReviews, new ReviewComparator());
 
         return wordReviews.get(0).getDue();
+    }
+
+    public void updateIntervals(Integer oldInterval, Integer newInterval) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(String.format("UPDATE %s SET interval = %d WHERE interval = %d;", NAME, newInterval, oldInterval));
+
+        getWritableDatabase().execSQL(stringBuilder.toString());
     }
 
     private class ReviewComparator implements Comparator<WordReview> {
