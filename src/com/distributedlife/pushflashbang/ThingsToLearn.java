@@ -7,7 +7,10 @@ import java.util.*;
 public class ThingsToLearn {
     private final ArrayList<Object> words;
     private final ArrayList<Object> sentences;
-    private final String language;
+    private final String language_foreign;
+    private final String congratulations_foreign;
+    private final String language_native;
+    private final String congratulations_native;
     private Schedule schedule;
     public static final String[] IGNORED = new String[]{
             " ", ",", ".", ";", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+",
@@ -17,9 +20,12 @@ public class ThingsToLearn {
     public ThingsToLearn(Map<String, Object> things, Schedule schedule) {
         this.schedule = schedule;
 
-        language = (String) things.get("language");
+        language_foreign = (String) things.get("language_foreign");
+        language_native = (String) things.get("language_native");
         words = (ArrayList<Object>) things.get("words");
         sentences = (ArrayList<Object>) things.get("sentences");
+        congratulations_foreign = (String) things.get("congratulations_foreign");
+        congratulations_native = (String) things.get("congratulations_native");
     }
 
     public ThingToLearn getFirst() {
@@ -120,8 +126,20 @@ public class ThingsToLearn {
         return "No guide found";
     }
 
-    public String getLanguage() {
-        return language;
+    public String getLanguageForeign() {
+        return language_foreign;
+    }
+
+    public String getCongratulationsForeign() {
+        return congratulations_foreign;
+    }
+
+    public String getCongratulationsNative() {
+        return congratulations_native;
+    }
+
+    public String getLanguageNative() {
+        return language_native;
     }
 
     private class SortByLength implements Comparator<WordReview> {

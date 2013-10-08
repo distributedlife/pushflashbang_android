@@ -45,4 +45,12 @@ public class PushFlashBangActivity extends Activity {
     private InputStream getAsset(String filename) throws IOException {
         return this.getAssets().open(filename);
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        intervals.close();
+        schedule.close();
+    }
 }

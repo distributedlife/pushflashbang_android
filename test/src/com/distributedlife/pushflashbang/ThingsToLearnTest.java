@@ -49,8 +49,24 @@ public class ThingsToLearnTest {
 
         things.put("words", words);
         things.put("sentences", sentences);
+        things.put("language_native", "english");
+        things.put("language_foreign", "chinese");
+        things.put("congratulations_native", "Congratulations");
+        things.put("congratulations_foreign", "祝贺您");
 
         thingsToLearn = new ThingsToLearn(things, schedule);
+    }
+
+    @Test
+    public void itShouldReturnTheLanguage() {
+        assertThat(thingsToLearn.getLanguageForeign(), is("chinese"));
+        assertThat(thingsToLearn.getLanguageNative(), is("english"));
+    }
+
+    @Test
+    public void itShouldReturnTheCongratulationsText() {
+        assertThat(thingsToLearn.getCongratulationsForeign(), is("祝贺您"));
+        assertThat(thingsToLearn.getCongratulationsNative(), is("Congratulations"));
     }
 
     @Test

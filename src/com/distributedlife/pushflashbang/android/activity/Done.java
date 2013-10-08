@@ -27,8 +27,17 @@ public class Done extends PushFlashBangActivity {
         if (schedule.getTimeOfNextReview().isBeforeNow()) {
             returnToReview();
         } else {
+            updateCongratulations();
             updateDoneMessage();
         }
+    }
+
+    private void updateCongratulations() {
+        TextView foreign = (TextView) this.findViewById(R.id.congratulations_foreign);
+        foreign.setText(thingsToLearn.getCongratulationsForeign());
+
+        TextView nativeLang = (TextView) this.findViewById(R.id.congratulations_native);
+        nativeLang.setText(thingsToLearn.getCongratulationsNative());
     }
 
     private void setupButtonEvents() {
@@ -43,7 +52,7 @@ public class Done extends PushFlashBangActivity {
 
     private String getUpdatedDoneMessage() {
         return this.getString(R.string.done_notice)
-                .replace("LANGUAGE", thingsToLearn.getLanguage())
+                .replace("LANGUAGE", thingsToLearn.getLanguageForeign())
                 .replace("TIME", getTimeFromNowHumanised(schedule.getTimeOfNextReview()));
     }
 

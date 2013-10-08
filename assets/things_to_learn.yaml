@@ -1,4 +1,7 @@
-language: Simplified Chinese
+language_foreign: Simplified Chinese
+language_native: English
+congratulations_foreign: 祝贺您
+congratulations_native: Congratulations
 words:
   - word: 你
     meaning: you

@@ -9,5 +9,4 @@
     <string name="review_success_button">Pass</string>
     <string name="review_failure_button">Fail</string>
     <string name="dummy">dummy</string>
-    <string name="congratulations_chinese">祝贺您</string>
 </resources>

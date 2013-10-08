@@ -1,16 +1,16 @@
 package com.distributedlife.pushflashbang.android.activity;
 
-import android.app.Activity;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
-import com.distributedlife.pushflashbang.*;
-import com.distributedlife.pushflashbang.db.Intervals;
-import com.distributedlife.pushflashbang.db.Schedule;
+import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
+import com.distributedlife.pushflashbang.R;
+import com.distributedlife.pushflashbang.WordReview;
 import com.distributedlife.pushflashbang.pronunciation.PronunciationExplanation;
 import com.distributedlife.pushflashbang.pronunciation.PronunciationGuidance;
 import org.apache.commons.lang3.Range;
@@ -18,7 +18,7 @@ import org.yaml.snakeyaml.Yaml;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.LinkedHashMap;
 
 public class Revealed extends PushFlashBangActivity {
     private PronunciationGuidance pronunciationGuidance;
@@ -27,30 +27,13 @@ public class Revealed extends PushFlashBangActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.revealed);
 
-//        intervals = new Intervals(this);
-//        schedule = new Schedule(this);
-//
-//        try {
-//            thingsToLearn = new ThingsToLearn((Map<String, Object>) new Yaml().load(getAsset(FILE_NAME)), schedule);
-//        } catch (IOException e) {
-//            //TODO: error dialogue.
-//            e.printStackTrace();
-//            finish();
-//        }
-//
-//        pushFlashBang = new PushFlashBang(intervals, schedule, thingsToLearn);
-
         try {
             pronunciationGuidance = new PronunciationGuidance((LinkedHashMap<String, Object>) new Yaml().load(getAsset("chinese_pronunciation_guidance.yaml")));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        Button reviewFailed = (Button) findViewById(R.id.fail);
-        reviewFailed.setOnClickListener(new ReviewFailed());
-
-        Button reviewPassed = (Button) findViewById(R.id.pass);
-        reviewPassed.setOnClickListener(new ReviewSucceeded());
+        setupButtonBindings();
 
         WordReview wordReview = pushFlashBang.getNextWordToReview();
         if (wordReview == null) {
@@ -58,6 +41,14 @@ public class Revealed extends PushFlashBangActivity {
         } else {
             setFields(wordReview);
         }
+    }
+
+    private void setupButtonBindings() {
+        Button reviewFailed = (Button) findViewById(R.id.fail);
+        reviewFailed.setOnClickListener(new ReviewFailed());
+
+        Button reviewPassed = (Button) findViewById(R.id.pass);
+        reviewPassed.setOnClickListener(new ReviewSucceeded());
     }
 
     private InputStream getAsset(String filename) throws IOException {
@@ -128,8 +119,8 @@ public class Revealed extends PushFlashBangActivity {
         public void onClick(View view) {
             pushFlashBang.failedReview(pushFlashBang.getNextWordToReview());
 
-            intervals.close();
-            schedule.close();
+//            intervals.close();
+//            schedule.close();
 
             finish();
         }
@@ -140,8 +131,8 @@ public class Revealed extends PushFlashBangActivity {
         public void onClick(View view) {
             pushFlashBang.successfulReview(pushFlashBang.getNextWordToReview());
 
-            intervals.close();
-            schedule.close();
+//            intervals.close();
+//            schedule.close();
 
             finish();
         }
