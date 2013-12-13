@@ -10,7 +10,7 @@ words:
     meaning: good
     guide: hǎo
   - word: 吗
-    meaning: question mark
+    meaning: Question Mark. Appending this to a sentence will make a statement a question.
     guide: ma
 sentences:
   - sentence: 你好吗

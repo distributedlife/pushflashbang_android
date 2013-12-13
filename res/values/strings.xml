@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PushFlashBang</string>
+    <string name="app_name">PushFlashBang (Simplified Chinese)</string>
     <string name="congratulations_english">Congratulations</string>
     <string name="done_notice">All the things for LANGUAGE have been reviewed. Your next review will be due in TIME from now.</string>
     <string name="close_application_button">CLOSE</string>
