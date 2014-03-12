@@ -12,8 +12,8 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.LinkedHashMap;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 
 public class ChinesePronunciationGuidanceTest {
     private PronunciationGuidance pronunciationGuidance;

@@ -2,8 +2,8 @@ package com.distributedlife.pushflashbang.pronunciation;
 
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 
 public class CharacterTest {
     @Test

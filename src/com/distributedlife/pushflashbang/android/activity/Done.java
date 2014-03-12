@@ -78,7 +78,7 @@ public class Done extends PushFlashBangActivity {
         } else if (seconds >= SECONDS_IN_DAY && seconds < (SECONDS_IN_DAY * 1.5)) {
             timeMessage = "about a day";
         } else {
-            timeMessage = String.format("about %d days", seconds / SECONDS_IN_DAY);
+            timeMessage = String.format("in %d days", seconds / SECONDS_IN_DAY);
         }
         return timeMessage;
     }
