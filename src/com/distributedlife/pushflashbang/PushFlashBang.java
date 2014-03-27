@@ -5,7 +5,7 @@ import com.distributedlife.pushflashbang.db.Schedule;
 import org.joda.time.DateTime;
 
 public class PushFlashBang {
-    private static final Integer[] INITIAL_INTERVALS = new Integer[] {0, 25, 120, 600, 3600, 18000, 86400, 432000, 2160000, 10368000, 63072000};
+    private static final Integer[] INITIAL_INTERVALS = new Integer[] {0, 25, 120, 600, 3600, 18000, 86400, 432000};
     public static final int SECONDS_TO_MILLIS = 1000;
     private ThingsToLearn thingsToLearn;
     private Intervals intervals;
@@ -79,19 +79,6 @@ public class PushFlashBang {
         review.setInterval(intervals.getFirst().getInterval());
         review.setDue(DateTime.now().plus(review.getInterval() * SECONDS_TO_MILLIS));
 
-        if (currentInterval.getSequence() == -10) {
-            currentInterval.setSequence(0);
-
-            Interval previousInterval = intervals.getPrevious(currentInterval.getInterval());
-
-            Integer oldInterval = currentInterval.getInterval();
-            Integer newInterval = (currentInterval.getInterval() + previousInterval.getInterval()) / 2;
-
-            currentInterval.setInterval(newInterval);
-
-            schedule.updateIntervals(oldInterval, newInterval);
-        }
-
         schedule.update(review);
         intervals.update(currentInterval);
     }
@@ -104,19 +91,6 @@ public class PushFlashBang {
 
         review.setInterval(nextInterval.getInterval());
         review.setDue(DateTime.now().plus(review.getInterval() * SECONDS_TO_MILLIS));
-
-        if (currentInterval.getSequence() == 10) {
-            currentInterval.setSequence(0);
-
-            if (currentInterval.getInterval() > 0) {
-                Integer oldInterval = currentInterval.getInterval();
-                Integer newInterval = (currentInterval.getInterval() + nextInterval.getInterval()) / 2;
-
-                currentInterval.setInterval(newInterval);
-
-                schedule.updateIntervals(oldInterval, newInterval);
-            }
-        }
 
         schedule.update(review);
         intervals.update(currentInterval);

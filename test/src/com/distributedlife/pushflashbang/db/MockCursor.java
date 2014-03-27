@@ -200,11 +200,6 @@ public class MockCursor implements Cursor {
     }
 
     @Override
-    public Uri getNotificationUri() {
-        throw new RuntimeException("Not Implemented");
-    }
-
-    @Override
     public boolean getWantsAllOnMoveCalls() {
         throw new RuntimeException("Not Implemented");
     }

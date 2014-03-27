@@ -2,6 +2,7 @@ package com.distributedlife.pushflashbang.integration;
 
 import com.distributedlife.pushflashbang.pronunciation.PronunciationGuidance;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.yaml.snakeyaml.Yaml;
 
@@ -15,6 +16,7 @@ import java.util.LinkedHashMap;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+@Ignore
 public class ChinesePronunciationGuidanceTest {
     private PronunciationGuidance pronunciationGuidance;
 

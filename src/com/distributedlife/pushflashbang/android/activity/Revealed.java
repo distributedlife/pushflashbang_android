@@ -1,35 +1,28 @@
 package com.distributedlife.pushflashbang.android.activity;
 
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 import com.distributedlife.pushflashbang.R;
 import com.distributedlife.pushflashbang.WordReview;
-import com.distributedlife.pushflashbang.pronunciation.PronunciationExplanation;
-import com.distributedlife.pushflashbang.pronunciation.PronunciationGuidance;
-import org.apache.commons.lang3.Range;
-import org.yaml.snakeyaml.Yaml;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.LinkedHashMap;
 
 public class Revealed extends ShowCardActivity {
-    private PronunciationGuidance pronunciationGuidance;
+//    private PronunciationGuidance pronunciationGuidance;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setup();
 
-        try {
-            pronunciationGuidance = new PronunciationGuidance((LinkedHashMap<String, Object>) new Yaml().load(getAsset("pronunciation_guidance.yaml")));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            pronunciationGuidance = new PronunciationGuidance((LinkedHashMap<String, Object>) new Yaml().load(getAsset("pronunciation_guidance.yaml")));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         WordReview wordReview = pushFlashBang.getNextWordToReview();
         if (wordReview == null) {
@@ -53,9 +46,9 @@ public class Revealed extends ShowCardActivity {
         reviewPassed.setOnClickListener(new ReviewSucceeded());
     }
 
-    private InputStream getAsset(String filename) throws IOException {
-        return this.getAssets().open(filename);
-    }
+//    private InputStream getAsset(String filename) throws IOException {
+//        return this.getAssets().open(filename);
+//    }
 
     private void setFields(WordReview wordReview) {
         setReviewedWord(wordReview);
@@ -70,23 +63,23 @@ public class Revealed extends ShowCardActivity {
         for (String part : phoneticPassage.split(" ")) {
             TableRow row = new TableRow(this);
 
-            PronunciationExplanation pronunciationExplanation = pronunciationGuidance.getExplanation(part);
+//            PronunciationExplanation pronunciationExplanation = pronunciationGuidance.getExplanation(part);
 
-            TextView pronunciationText = newPronunciationText(pronunciationExplanation);
-            highlightKeySoundsInPronunciationText(pronunciationExplanation, pronunciationText);
+//            TextView pronunciationText = newPronunciationText(pronunciationExplanation);
+//            highlightKeySoundsInPronunciationText(pronunciationExplanation, pronunciationText);
 
             row.addView(newPhoneticText(part));
-            row.addView(pronunciationText);
+//            row.addView(pronunciationText);
             pronunciation.addView(row);
         }
     }
 
-    private void highlightKeySoundsInPronunciationText(PronunciationExplanation pronunciationExplanation, TextView pronunciationText) {
-        Spannable str = (Spannable) pronunciationText.getText();
-        for(Range<Integer> range: pronunciationExplanation.getEmphasisedParts()) {
-            str.setSpan(new ForegroundColorSpan(0x8CFF0000), range.getMinimum(), range.getMaximum(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        }
-    }
+//    private void highlightKeySoundsInPronunciationText(PronunciationExplanation pronunciationExplanation, TextView pronunciationText) {
+//        Spannable str = (Spannable) pronunciationText.getText();
+//        for(Range<Integer> range: pronunciationExplanation.getEmphasisedParts()) {
+//            str.setSpan(new ForegroundColorSpan(0x8CFF0000), range.getMinimum(), range.getMaximum(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        }
+//    }
 
     private TextView newPhoneticText(String part) {
         TextView guideText = new TextView(this);
@@ -96,15 +89,15 @@ public class Revealed extends ShowCardActivity {
         return guideText;
     }
 
-    private TextView newPronunciationText(PronunciationExplanation explanation) {
-        TextView pronunciationText = new TextView(this);
-        pronunciationText.setText(explanation.withoutTags(), TextView.BufferType.SPANNABLE);
-        pronunciationText.setTextAppearance(this, R.style.pronunciationText);
-        pronunciationText.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        pronunciationText.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 0.75f));
-
-        return pronunciationText;
-    }
+//    private TextView newPronunciationText(PronunciationExplanation explanation) {
+//        TextView pronunciationText = new TextView(this);
+//        pronunciationText.setText(explanation.withoutTags(), TextView.BufferType.SPANNABLE);
+//        pronunciationText.setTextAppearance(this, R.style.pronunciationText);
+//        pronunciationText.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+//        pronunciationText.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 0.75f));
+//
+//        return pronunciationText;
+//    }
 
     private void setTranslation(WordReview wordReview) {
         TextView meaning = (TextView) findViewById(R.id.meaning);

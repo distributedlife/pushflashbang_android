@@ -20,10 +20,6 @@ public class Interval {
         return interval;
     }
 
-    public void setInterval(Integer interval) {
-        this.interval = interval;
-    }
-
     public Integer getSequence() {
         return sequence;
     }

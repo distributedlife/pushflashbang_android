@@ -8,12 +8,12 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_alignLeft="@+id/what"
-            android:layout_above="@+id/reveal" android:background="#555" android:layout_below="@+id/include">
+            android:background="#555" android:layout_below="@+id/include">
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/congratulations_foreign" android:textSize="32sp" android:layout_centerHorizontal="true"
-                android:textAlignment="center" android:layout_alignRight="@+id/reveal"
+                android:layout_alignRight="@+id/reveal"
                 android:layout_alignLeft="@+id/reveal"
                 android:autoText="false" android:gravity="center_horizontal" android:layout_marginTop="12dp"
                 android:textColor="#fff" android:text="@string/dummy"/>
@@ -22,7 +22,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/dummy"
                 android:id="@+id/congratulations_native" android:textSize="32sp"
-                android:textAlignment="center"
                 android:autoText="false"
                 android:gravity="center_horizontal" android:layout_centerHorizontal="true"
                 android:layout_below="@+id/congratulations_foreign" android:layout_marginTop="12dp"
